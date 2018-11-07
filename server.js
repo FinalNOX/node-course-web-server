@@ -34,6 +34,14 @@ hbs.registerHelper('screamIt', (text) => {
     return text.toUpperCase();
 })
 
+app.get('/characterSheet', (req, res) => {
+    //res.send('Hello Express!');
+    res.render('characterSheet.hbs', {
+        pageTitle: "Home Page",
+        welcomeMessage: "Welcome To The Home Page"
+    })
+});
+
 app.get('/', (req, res) => {
     //res.send('Hello Express!');
     res.render('home.hbs', {
